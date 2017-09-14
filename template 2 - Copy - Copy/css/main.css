@@ -15,9 +15,27 @@ body {
     top: 0; left: 0; bottom: 0; right: 0;    
 }
 
+#date {
+    color: white;
+    font-family: heveltica, monospace;
+    font-size: 20px;
+    height: 500px;
+    margin: auto;
+    text-align: center;
+
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+}
+
 @media(min-width: 750px) {
     #time {
         font-size: 10em;
         
+    }
+}
+
+@media(min-width: 750px) {
+    #date {
+        font-size: 10em;
     }
 }
