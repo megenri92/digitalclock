@@ -19,7 +19,15 @@ function startTime() {
     var hour = currentTime.getHours()
     var minute = currentTime.getMinutes()
     var second = currentTime.getSeconds()
-    var amPM = (hour > 11) ? "PM" : "am";    
+    var amPM = (hour > 11) ? "PM" : "am";  
+    
+     // start date
+    var currentDate = new Date()
+    // store the current day, month, date, and year in variables
+    var weekday = currentDate.getDay()
+    var month = currentDate.getMonth()
+    var date = currentDate.getDate()
+    var year = currentDate.getFullYear()
     
     //change military time to standard time if hours are greater than 12
     if (hour > 12) {
@@ -33,7 +41,7 @@ function startTime() {
 
     //select element with id="time" and change the text to the current time
     document.getElementById('time').textContent = hour + ":" + minute + ":" + second + amPM
-
+    document.getElementById('date').textContent = weekday + "," + month + "/" + date + "/" + year
 
     //recalls the function every second, time becomes dynamic
     setTimeout(function () {
@@ -43,3 +51,4 @@ function startTime() {
 
 // add event listener to start function so finally time will be displayed
 document.getElementById('time').addEventListener('onload', startTime(), false)
+document.getElementById('date').addEventListener('onload', startTime(), false)
